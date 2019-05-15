@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol PlacesVMProtocol: BaseVMProtocol {
+    var delegate: PlacesVMOutputProtocol? { get set }
+}
+
+protocol PlacesVMOutputProtocol: BaseVMOutputProtocol {
+    
+}

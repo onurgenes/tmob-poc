@@ -20,6 +20,15 @@ final class MainCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let vc = MainVC()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func openPlaces() {
+        let placesCoordinator = PlacesCoordinator(navigationController: navigationController)
+        placesCoordinator.parentCoordinator = self
+        self.childCoordinators.append(placesCoordinator)
+        placesCoordinator.start()
     }
 }

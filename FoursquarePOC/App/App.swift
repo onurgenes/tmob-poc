@@ -26,7 +26,19 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        navigationController.pushViewController(ViewController(), animated: false)
+        let splashCoordinator = SplashCoordinator()
+        splashCoordinator.parentCoordinator = self
+        childCoordinators.append(splashCoordinator)
+        window.rootViewController = splashCoordinator.navigationController
+        splashCoordinator.start()
     }
     
+    func didFinishSplash(coordinator: Coordinator) {
+        removeChild(coordinator: coordinator)
+        let mainCoordinator = MainCoordinator(navigationController: navigationController)
+        mainCoordinator.parentCoordinator = self
+        childCoordinators.append(mainCoordinator)
+        window.rootViewController = navigationController
+        mainCoordinator.start()
+    }
 }

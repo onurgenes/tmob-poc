@@ -10,6 +10,7 @@ import Foundation
 
 protocol MainVMProtocol: BaseVMProtocol {
     var delegate: MainVMOutputProtocol? { get set }
+    
 }
 
 protocol MainVMOutputProtocol: BaseVMOutputProtocol {

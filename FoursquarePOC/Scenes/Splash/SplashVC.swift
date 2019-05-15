@@ -19,7 +19,7 @@ final class SplashVC: BaseVC<SplashVM, SplashView, SplashCoordinator> {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            print("finished")
+            
             self.coordinator?.didFinish()
         }
     }

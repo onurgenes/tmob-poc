@@ -6,4 +6,13 @@
 //  Copyright © 2019 Onur Geneş. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class PlacesVC: BaseVC<PlacesVM, PlacesView, PlacesCoordinator> {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .yellow
+    }
+}
