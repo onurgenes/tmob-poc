@@ -28,6 +28,11 @@
 		6E3F5333228C2F9D00AABB67 /* PlacesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5332228C2F9D00AABB67 /* PlacesVM.swift */; };
 		6E3F5335228C2FDD00AABB67 /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5334228C2FDD00AABB67 /* PlacesView.swift */; };
 		6E3F5337228C300900AABB67 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5336228C300900AABB67 /* PlacesVC.swift */; };
+		6E3F5339228C39AC00AABB67 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5338228C39AC00AABB67 /* DetailCoordinator.swift */; };
+		6E3F533C228C3A1000AABB67 /* DetailVMContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F533B228C3A1000AABB67 /* DetailVMContracts.swift */; };
+		6E3F533E228C3A6400AABB67 /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F533D228C3A6400AABB67 /* DetailVM.swift */; };
+		6E3F5340228C3AAB00AABB67 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F533F228C3AAB00AABB67 /* DetailView.swift */; };
+		6E3F5342228C3AD200AABB67 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5341228C3AD200AABB67 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		6E3F5332228C2F9D00AABB67 /* PlacesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVM.swift; sourceTree = "<group>"; };
 		6E3F5334228C2FDD00AABB67 /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 		6E3F5336228C300900AABB67 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
+		6E3F5338228C39AC00AABB67 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		6E3F533B228C3A1000AABB67 /* DetailVMContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVMContracts.swift; sourceTree = "<group>"; };
+		6E3F533D228C3A6400AABB67 /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
+		6E3F533F228C3AAB00AABB67 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		6E3F5341228C3AD200AABB67 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +151,10 @@
 		6E3F532C228C2C4000AABB67 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6E3F532D228C2F0100AABB67 /* Places */,
 				6E3F5316228C14B400AABB67 /* Splash */,
 				6E3F5323228C2B3000AABB67 /* Main */,
+				6E3F532D228C2F0100AABB67 /* Places */,
+				6E3F533A228C39FC00AABB67 /* Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -158,6 +169,18 @@
 				6E3F5336228C300900AABB67 /* PlacesVC.swift */,
 			);
 			path = Places;
+			sourceTree = "<group>";
+		};
+		6E3F533A228C39FC00AABB67 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6E3F5338228C39AC00AABB67 /* DetailCoordinator.swift */,
+				6E3F533B228C3A1000AABB67 /* DetailVMContracts.swift */,
+				6E3F533D228C3A6400AABB67 /* DetailVM.swift */,
+				6E3F533F228C3AAB00AABB67 /* DetailView.swift */,
+				6E3F5341228C3AD200AABB67 /* DetailVC.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,15 +258,20 @@
 				6E3F5320228C159800AABB67 /* SplashVC.swift in Sources */,
 				6E3F5333228C2F9D00AABB67 /* PlacesVM.swift in Sources */,
 				6E3F5337228C300900AABB67 /* PlacesVC.swift in Sources */,
+				6E3F5342228C3AD200AABB67 /* DetailVC.swift in Sources */,
+				6E3F533E228C3A6400AABB67 /* DetailVM.swift in Sources */,
 				6E3F5325228C2B8A00AABB67 /* MainVMContracts.swift in Sources */,
 				6E3F52FD228C09A600AABB67 /* AppDelegate.swift in Sources */,
 				6E3F532F228C2F0C00AABB67 /* PlacesCoordinator.swift in Sources */,
 				6E3F5322228C2B0C00AABB67 /* MainCoordinator.swift in Sources */,
 				6E3F5318228C14CB00AABB67 /* SplashCoordinator.swift in Sources */,
 				6E3F5313228C138200AABB67 /* App.swift in Sources */,
+				6E3F533C228C3A1000AABB67 /* DetailVMContracts.swift in Sources */,
 				6E3F5331228C2F5A00AABB67 /* PlacesContracts.swift in Sources */,
 				6E3F5327228C2BC000AABB67 /* MainVM.swift in Sources */,
+				6E3F5339228C39AC00AABB67 /* DetailCoordinator.swift in Sources */,
 				6E3F5335228C2FDD00AABB67 /* PlacesView.swift in Sources */,
+				6E3F5340228C3AAB00AABB67 /* DetailView.swift in Sources */,
 				6E3F531A228C150C00AABB67 /* SplashContracts.swift in Sources */,
 				6E3F530F228C132600AABB67 /* Coordinator.swift in Sources */,
 				6E3F531C228C155000AABB67 /* SplashVM.swift in Sources */,

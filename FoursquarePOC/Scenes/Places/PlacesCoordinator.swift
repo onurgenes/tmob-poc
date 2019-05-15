@@ -26,6 +26,18 @@ final class PlacesCoordinator: NSObject, Coordinator, UINavigationControllerDele
         navigationController.pushViewController(placesVC, animated: true)
     }
     
+    func openDetail() {
+        let detailCoordinator = DetailCoordinator(navigationController: navigationController)
+        detailCoordinator.parentCoordinator = self
+        childCoordinators.append(detailCoordinator)
+        detailCoordinator.start()
+    }
+    
+    func finishedDetail(coordinator: Coordinator) {
+        removeChild(coordinator: coordinator)
+    }
+    
+    // For Back Navigation Button
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
             return
