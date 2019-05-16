@@ -33,6 +33,23 @@ class NetworkManager: Networkable {
         }
     }
     
+    func getNearbyWith(latitude: Double, longitude: Double, type: String, completion: @escaping (Result<NearbyModel, Error>) -> ()) {
+        provider.request(.getNearbyPlacesWith(latitude: latitude, longitude: longitude, type: type)) { (result) in
+            switch result {
+            case .failure(let err):
+                completion(.failure(err))
+            case .success(let val):
+                let decoder = JSONDecoder()
+                do {
+                    let model = try decoder.decode(NearbyModel.self, from: val.data)
+                    completion(.success(model))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
     func getDetailsOfVenue(id: String, completion: @escaping (Result<VenueDetail, Error>) -> ()) {
         provider.request(.getVenueDetails(id: id)) { (result) in
             switch result {

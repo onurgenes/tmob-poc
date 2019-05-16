@@ -10,6 +10,9 @@ import UIKit
 
 final class DetailCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
+    var locationLat: Double?
+    var locationLon: Double?
+    var model: VenueDetail?
     
     var childCoordinators: [Coordinator]
     var navigationController: UINavigationController
@@ -21,6 +24,9 @@ final class DetailCoordinator: Coordinator {
     
     func start() {
         let vc = DetailVC()
+        vc.lat = locationLat
+        vc.lon = locationLon
+        vc.model = model
         navigationController.present(vc, animated: true)
     }
 }

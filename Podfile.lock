@@ -8,11 +8,15 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - Result (4.1.0)
+  - SwiftLocation (3.2.3):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftyJSON (4.0.0)
   - TinyConstraints (4.0.0)
 
 DEPENDENCIES:
   - AlamofireImage
   - Moya
+  - SwiftLocation
   - TinyConstraints
 
 SPEC REPOS:
@@ -21,6 +25,8 @@ SPEC REPOS:
     - AlamofireImage
     - Moya
     - Result
+    - SwiftLocation
+    - SwiftyJSON
     - TinyConstraints
 
 SPEC CHECKSUMS:
@@ -28,8 +34,10 @@ SPEC CHECKSUMS:
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   TinyConstraints: 03bc091844b98c18dbaead8b1153242a42721b56
 
-PODFILE CHECKSUM: a4a30a5bb0b9694cc8f390e7fccde61ec2cc26a9
+PODFILE CHECKSUM: aac892626fa96d3aab2179e8cb4733d3b2f7a544
 
 COCOAPODS: 1.6.0

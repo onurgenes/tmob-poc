@@ -40,6 +40,7 @@
 		6E3F5342228C3AD200AABB67 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5341228C3AD200AABB67 /* DetailVC.swift */; };
 		6E4FB125228CE9FE00EE1DFF /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FB124228CE9FE00EE1DFF /* UIView+Constraint.swift */; };
 		6ED356F2228DF96C00A785E6 /* FadeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED356F1228DF96C00A785E6 /* FadeTransitionAnimator.swift */; };
+		6ED356F4228E1B5A00A785E6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED356F3228E1B5A00A785E6 /* HeaderView.swift */; };
 		6EFBC3C2228D9D9B00C60759 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBC3C1228D9D9B00C60759 /* PlacesCell.swift */; };
 		6EFBC3C4228DA50A00C60759 /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBC3C3228DA50A00C60759 /* VenueDetailModel.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		6E3F5341228C3AD200AABB67 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		6E4FB124228CE9FE00EE1DFF /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
 		6ED356F1228DF96C00A785E6 /* FadeTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimator.swift; sourceTree = "<group>"; };
+		6ED356F3228E1B5A00A785E6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6EFBC3C1228D9D9B00C60759 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		6EFBC3C3228DA50A00C60759 /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
 		D641C4220B2A42989DAE6347 /* Pods_FoursquarePOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquarePOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +236,7 @@
 				6E3F533B228C3A1000AABB67 /* DetailVMContracts.swift */,
 				6E3F533D228C3A6400AABB67 /* DetailVM.swift */,
 				6E3F533F228C3AAB00AABB67 /* DetailView.swift */,
+				6ED356F3228E1B5A00A785E6 /* HeaderView.swift */,
 				6E3F5341228C3AD200AABB67 /* DetailVC.swift */,
 			);
 			path = Detail;
@@ -358,6 +361,8 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -368,6 +373,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +396,7 @@
 				6E3F5333228C2F9D00AABB67 /* PlacesVM.swift in Sources */,
 				6E3F5337228C300900AABB67 /* PlacesVC.swift in Sources */,
 				6E3F5342228C3AD200AABB67 /* DetailVC.swift in Sources */,
+				6ED356F4228E1B5A00A785E6 /* HeaderView.swift in Sources */,
 				6E3F533E228C3A6400AABB67 /* DetailVM.swift in Sources */,
 				6E3F5325228C2B8A00AABB67 /* MainVMContracts.swift in Sources */,
 				6E3F52FD228C09A600AABB67 /* AppDelegate.swift in Sources */,

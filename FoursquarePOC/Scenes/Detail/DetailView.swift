@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailView: UIView {
     
@@ -18,8 +19,9 @@ class DetailView: UIView {
     }()
     
     lazy var tableView: UITableView = {
-        let tv = UITableView(frame: .zero, style: .plain)
+        let tv = UITableView(frame: .zero, style: .grouped)
         tv.backgroundColor = .white
+        tv.layer.cornerRadius = 12
         return tv
     }()
     
@@ -29,7 +31,7 @@ class DetailView: UIView {
         backgroundColor = .clear
         
         addSubview(effectView)
-        effectView.addSubview(tableView)
+        addSubview(tableView)
         
         effectView.fillSuperView()
         

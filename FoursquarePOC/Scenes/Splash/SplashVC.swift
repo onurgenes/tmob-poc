@@ -10,7 +10,7 @@ import Foundation
 
 final class SplashVC: BaseVC<SplashVM, SplashView, SplashCoordinator> {
     
-    private let waitingTime: TimeInterval = 0.3
+    private let waitingTime: TimeInterval = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()

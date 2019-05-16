@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftLocation
 
 final class MainVM: MainVMProtocol {
     weak var delegate: MainVMOutputProtocol?
@@ -20,6 +21,28 @@ final class MainVM: MainVMProtocol {
             case .success(let model):
                 self.delegate?.didGetNearby(places: model)
             }
+        }
+    }
+    
+    func getNearbyPlacesWithCoordinates(type: String) {
+        
+        // I have used this for getting user location without asking permission.
+        // Hacky way but it works for development purposes.
+        // This basically gets user's location with GEO IP.
+        Locator.currentPosition(usingIP: .ipApi, onSuccess: { (location) -> (Void) in
+            DispatchQueue.main.async {
+                self.networkManager.getNearbyWith(latitude: location.coordinate.latitude, longitude: location.coordinate.latitude, type: type) { result in
+                    switch result {
+                    case .failure(let err):
+                        self.delegate?.failedGetNearby(error: err)
+                    case .success(let model):
+                        self.delegate?.didGetNearby(places: model)
+                    }
+                }
+            }
+            
+        }) { (error, location) -> (Void) in
+            self.delegate?.failedGetNearby(error: error)
         }
     }
 }

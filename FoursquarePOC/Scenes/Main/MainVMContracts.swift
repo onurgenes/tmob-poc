@@ -12,6 +12,7 @@ protocol MainVMProtocol: BaseVMProtocol {
     var delegate: MainVMOutputProtocol? { get set }
     
     func getNearbyPlaces(for locationName: String, type: String)
+    func getNearbyPlacesWithCoordinates(type: String)
 }
 
 protocol MainVMOutputProtocol: BaseVMOutputProtocol {

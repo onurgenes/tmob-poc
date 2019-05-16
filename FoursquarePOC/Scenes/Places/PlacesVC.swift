@@ -41,7 +41,7 @@ extension PlacesVC: PlacesVMOutputProtocol {
     }
     
     func didGetVenueDetails(details: VenueDetail) {
-        
+        coordinator?.openDetail(lat: details.response.venue.location.lat, lon: details.response.venue.location.lng, model: details)
     }
 }
 
@@ -62,7 +62,7 @@ extension PlacesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedVenue = model.response.venues[indexPath.row]
 //        viewModel.getVenueDetails(id: selectedVenue.id)
-        coordinator?.openDetail()
+        coordinator?.openDetail(lat: selectedVenue.location.lat, lon: selectedVenue.location.lng, model: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

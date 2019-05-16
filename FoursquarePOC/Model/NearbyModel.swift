@@ -30,7 +30,7 @@ struct Meta: Codable {
 
 struct Response: Codable {
     let venues: [Venue]
-    let geocode: Geocode
+    let geocode: Geocode?
 }
 
 struct Geocode: Codable {

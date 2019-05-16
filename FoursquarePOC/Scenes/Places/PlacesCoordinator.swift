@@ -29,8 +29,11 @@ final class PlacesCoordinator: NSObject, Coordinator, UINavigationControllerDele
         navigationController.pushViewController(placesVC, animated: true)
     }
     
-    func openDetail() {
+    func openDetail(lat: Double, lon: Double, model: VenueDetail?) {
         let detailCoordinator = DetailCoordinator(navigationController: navigationController)
+        detailCoordinator.locationLat = lat
+        detailCoordinator.locationLon = lon
+        detailCoordinator.model = model
         detailCoordinator.parentCoordinator = self
         childCoordinators.append(detailCoordinator)
         detailCoordinator.start()

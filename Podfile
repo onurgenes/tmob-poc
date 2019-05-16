@@ -5,4 +5,5 @@ target 'FoursquarePOC' do
   pod 'Moya'
   pod 'TinyConstraints'
   pod 'AlamofireImage'
+  pod 'SwiftLocation', :inhibit_warnings => true
 end

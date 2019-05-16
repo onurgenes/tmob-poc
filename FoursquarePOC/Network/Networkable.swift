@@ -13,5 +13,6 @@ protocol Networkable: AnyObject {
     var provider: MoyaProvider<FoursquareAPI> { get set }
     
     func getNearby(for locationName: String, type: String, completion: @escaping (Result<NearbyModel, Error>) -> ())
+    func getNearbyWith(latitude: Double, longitude: Double, type: String, completion: @escaping (Result<NearbyModel, Error>) -> ())
     func getDetailsOfVenue(id: String, completion: @escaping (Result<VenueDetail, Error>) -> ())
 }

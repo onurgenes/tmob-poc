@@ -11,6 +11,7 @@ import Moya
 
 enum FoursquareAPI {
     case getNearbyPlaces(locationName: String, type: String)
+    case getNearbyPlacesWith(latitude: Double, longitude: Double, type: String)
     case getVenueDetails(id: String)
 }
 
@@ -25,7 +26,7 @@ extension FoursquareAPI: TargetType {
     
     var path: String {
         switch self {
-        case .getNearbyPlaces:
+        case .getNearbyPlaces, .getNearbyPlacesWith:
             return "/venues/search"
         case .getVenueDetails(let id):
             return "/venues/\(id)"
@@ -34,7 +35,7 @@ extension FoursquareAPI: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getNearbyPlaces:
+        case .getNearbyPlaces, .getNearbyPlacesWith:
             return .get
         case .getVenueDetails:
             return .get
@@ -61,6 +62,13 @@ extension FoursquareAPI: TargetType {
             params["query"] = type
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
             
+        case .getNearbyPlacesWith(let latitude, let longitude, let type):
+            params["ll"] = ["\(latitude)", "\(longitude)"].joined(separator: ",")
+            params["intent"] = "browse"
+            params["limit"] = 20
+            params["radius"] = 5000
+            params["query"] = type
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
         case .getVenueDetails:
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftLocation
 
 final class MainVC: BaseVC<MainVM, MainView, MainCoordinator> {
     
@@ -18,14 +19,11 @@ final class MainVC: BaseVC<MainVM, MainView, MainCoordinator> {
         baseView.searchButton.addTarget(self, action: #selector(searchTapped), for: .touchUpInside)
         baseView.locationNameTextField.delegate = self
         baseView.typeTextField.delegate = self
-        
-        viewModel.getNearbyPlaces(for: "ankara", type: "resto")
     }
     
     @objc func searchTapped() {
-        guard let locationName = baseView.locationNameTextField.text,
-            locationName.count > 2,
-            let type = baseView.typeTextField.text
+        guard let type = baseView.typeTextField.text,
+            type.count > 2
         else {
             let ac = UIAlertController(title: "Error", message: "Location name is too short.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -33,7 +31,12 @@ final class MainVC: BaseVC<MainVM, MainView, MainCoordinator> {
             return
         }
         
-        viewModel.getNearbyPlaces(for: locationName, type: type)
+        if let locationName = baseView.locationNameTextField.text, !locationName.isEmpty {
+            viewModel.getNearbyPlaces(for: locationName, type: type)
+        } else {
+            viewModel.getNearbyPlacesWithCoordinates(type: type)
+        }
+        
     }
 }
 
