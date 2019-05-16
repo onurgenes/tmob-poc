@@ -4,4 +4,5 @@ target 'FoursquarePOC' do
   use_frameworks!
   pod 'Moya'
   pod 'TinyConstraints'
+  pod 'AlamofireImage'
 end

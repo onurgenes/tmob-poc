@@ -32,4 +32,21 @@ class NetworkManager: Networkable {
             }
         }
     }
+    
+    func getDetailsOfVenue(id: String, completion: @escaping (Result<VenueDetail, Error>) -> ()) {
+        provider.request(.getVenueDetails(id: id)) { (result) in
+            switch result {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let value):
+                let decoder = JSONDecoder()
+                do {
+                    let model = try decoder.decode(VenueDetail.self, from: value.data)
+                    completion(.success(model))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
 }

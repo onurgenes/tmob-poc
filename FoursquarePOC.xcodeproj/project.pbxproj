@@ -39,6 +39,8 @@
 		6E3F5340228C3AAB00AABB67 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F533F228C3AAB00AABB67 /* DetailView.swift */; };
 		6E3F5342228C3AD200AABB67 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5341228C3AD200AABB67 /* DetailVC.swift */; };
 		6E4FB125228CE9FE00EE1DFF /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FB124228CE9FE00EE1DFF /* UIView+Constraint.swift */; };
+		6EFBC3C2228D9D9B00C60759 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBC3C1228D9D9B00C60759 /* PlacesCell.swift */; };
+		6EFBC3C4228DA50A00C60759 /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBC3C3228DA50A00C60759 /* VenueDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		6E3F533F228C3AAB00AABB67 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		6E3F5341228C3AD200AABB67 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		6E4FB124228CE9FE00EE1DFF /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
+		6EFBC3C1228D9D9B00C60759 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
+		6EFBC3C3228DA50A00C60759 /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
 		D641C4220B2A42989DAE6347 /* Pods_FoursquarePOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquarePOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				6E020DDA228D58DD002B23BE /* NearbyModel.swift */,
+				6EFBC3C3228DA50A00C60759 /* VenueDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				6E3F5332228C2F9D00AABB67 /* PlacesVM.swift */,
 				6E3F5334228C2FDD00AABB67 /* PlacesView.swift */,
 				6E3F5336228C300900AABB67 /* PlacesVC.swift */,
+				6EFBC3C1228D9D9B00C60759 /* PlacesCell.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FoursquarePOC/Pods-FoursquarePOC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
@@ -355,6 +362,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
@@ -398,6 +406,8 @@
 				6E3F531A228C150C00AABB67 /* SplashContracts.swift in Sources */,
 				6E3F530F228C132600AABB67 /* Coordinator.swift in Sources */,
 				6E3F531C228C155000AABB67 /* SplashVM.swift in Sources */,
+				6EFBC3C2228D9D9B00C60759 /* PlacesCell.swift in Sources */,
+				6EFBC3C4228DA50A00C60759 /* VenueDetailModel.swift in Sources */,
 				6E3F531E228C156A00AABB67 /* SplashView.swift in Sources */,
 				6E3F532B228C2C0300AABB67 /* MainVC.swift in Sources */,
 			);

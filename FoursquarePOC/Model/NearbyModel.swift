@@ -56,6 +56,7 @@ struct Location: Codable {
     let lat, lng: Double
     let labeledLatLngs: [LabeledLatLng]?
     let formattedAddress: [String]
+    let country: String
     let address, city, state, postalCode: String?
     let crossStreet, neighborhood: String?
 }

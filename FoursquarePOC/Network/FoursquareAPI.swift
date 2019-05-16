@@ -11,6 +11,7 @@ import Moya
 
 enum FoursquareAPI {
     case getNearbyPlaces(locationName: String, type: String)
+    case getVenueDetails(id: String)
 }
 
 // ** MOYA **
@@ -26,12 +27,16 @@ extension FoursquareAPI: TargetType {
         switch self {
         case .getNearbyPlaces:
             return "/venues/search"
+        case .getVenueDetails(let id):
+            return "/venues/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .getNearbyPlaces:
+            return .get
+        case .getVenueDetails:
             return .get
         }
     }
@@ -54,6 +59,9 @@ extension FoursquareAPI: TargetType {
             params["limit"] = 20
             params["radius"] = 5000
             params["query"] = type
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            
+        case .getVenueDetails:
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }

@@ -43,7 +43,7 @@ extension MainVC: MainVMOutputProtocol {
     }
     
     func failedGetNearby(error: Error) {
-        let ac = UIAlertController(title: "Error", message: "Location name is too short.\n\n \(error)", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Error", message: "Unexpected error.\n\n \(error)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(ac, animated: true)
     }

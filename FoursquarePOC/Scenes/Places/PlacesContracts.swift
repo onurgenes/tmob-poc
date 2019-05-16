@@ -10,8 +10,11 @@ import Foundation
 
 protocol PlacesVMProtocol: BaseVMProtocol {
     var delegate: PlacesVMOutputProtocol? { get set }
+    
+    func getVenueDetails(id: String)
 }
 
 protocol PlacesVMOutputProtocol: BaseVMOutputProtocol {
-    
+    func failedGetVenueDetails(error: Error)
+    func didGetVenueDetails(details: VenueDetail)
 }

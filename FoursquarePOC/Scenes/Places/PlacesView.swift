@@ -20,6 +20,8 @@ class PlacesView: UIView {
         
         backgroundColor = .white
         
+        addSubview(tableView)
+        
         // Using ''TinyConstraints''. I am a contributer of this project. Also it simplifies AutoLayout code.
         if #available(iOS 10.0, *) {
             tableView.edgesToSuperview(usingSafeArea: true)

@@ -24,6 +24,7 @@ final class PlacesCoordinator: NSObject, Coordinator, UINavigationControllerDele
     func start() {
         let placesVC = PlacesVC()
         placesVC.coordinator = self
+        placesVC.model = self.model
         navigationController.delegate = self
         navigationController.pushViewController(placesVC, animated: true)
     }
