@@ -10,6 +10,8 @@ import Foundation
 
 final class SplashVC: BaseVC<SplashVM, SplashView, SplashCoordinator> {
     
+    private let waitingTime: TimeInterval = 0.3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +21,7 @@ final class SplashVC: BaseVC<SplashVM, SplashView, SplashCoordinator> {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + waitingTime) {
             self.coordinator?.didFinish()
         }
     }

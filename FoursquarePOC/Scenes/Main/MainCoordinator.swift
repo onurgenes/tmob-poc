@@ -25,9 +25,10 @@ final class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func openPlaces() {
+    func openPlaces(model: NearbyModel) {
         let placesCoordinator = PlacesCoordinator(navigationController: navigationController)
         placesCoordinator.parentCoordinator = self
+        placesCoordinator.model = model
         self.childCoordinators.append(placesCoordinator)
         placesCoordinator.start()
     }

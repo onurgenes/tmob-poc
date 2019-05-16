@@ -8,6 +8,11 @@
 
 import Foundation
 
+// ***
+// This model does NOT cover all fields of response.
+// For demo purposes, we are covering as little as we want.
+// ***
+
 struct NearbyModel: Codable {
     let meta: Meta
     let response: Response

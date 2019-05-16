@@ -25,6 +25,7 @@ final class SplashView: UIView {
         
         addSubview(imageView)
         
+        // This is a demonstration for extension usage. You can see it in 'Extensions" folder.
         imageView.fillSuperView()
         
     }

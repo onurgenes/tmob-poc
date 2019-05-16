@@ -140,6 +140,7 @@
 		6E3F52FB228C09A600AABB67 /* FoursquarePOC */ = {
 			isa = PBXGroup;
 			children = (
+				6E020DE0228D6037002B23BE /* Model */,
 				6E020DD7228D5265002B23BE /* Network */,
 				6E4FB123228CE9EF00EE1DFF /* Extensions */,
 				6E3F5315228C149F00AABB67 /* Base */,
@@ -148,7 +149,6 @@
 				6E3F5303228C09A700AABB67 /* Assets.xcassets */,
 				6E3F5305228C09A700AABB67 /* LaunchScreen.storyboard */,
 				6E3F5308228C09A700AABB67 /* Info.plist */,
-				6E020DE0228D6037002B23BE /* Model */,
 			);
 			path = FoursquarePOC;
 			sourceTree = "<group>";

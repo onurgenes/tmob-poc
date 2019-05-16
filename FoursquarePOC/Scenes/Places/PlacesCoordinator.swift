@@ -14,6 +14,8 @@ final class PlacesCoordinator: NSObject, Coordinator, UINavigationControllerDele
     var childCoordinators: [Coordinator]
     var navigationController: UINavigationController
     
+    var model: NearbyModel?
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         childCoordinators = []
