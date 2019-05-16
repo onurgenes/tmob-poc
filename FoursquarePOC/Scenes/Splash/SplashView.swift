@@ -10,8 +10,22 @@ import UIKit
 
 final class SplashView: UIView {
     
+    lazy var imageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.backgroundColor = .red
+        return iv
+    }()
+    
     convenience init() {
         self.init(frame: .zero)
+        
+        backgroundColor = .white
+        
+        addSubview(imageView)
+        
+        imageView.fillSuperView()
         
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288C31DE0220F506C190F5F3 /* Pods_FoursquarePOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D641C4220B2A42989DAE6347 /* Pods_FoursquarePOC.framework */; };
+		6E020DD9228D5271002B23BE /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E020DD8228D5271002B23BE /* FoursquareAPI.swift */; };
 		6E3F52FD228C09A600AABB67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F52FC228C09A600AABB67 /* AppDelegate.swift */; };
 		6E3F5304228C09A700AABB67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3F5303228C09A700AABB67 /* Assets.xcassets */; };
 		6E3F5307228C09A700AABB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3F5305228C09A700AABB67 /* LaunchScreen.storyboard */; };
@@ -33,9 +35,13 @@
 		6E3F533E228C3A6400AABB67 /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F533D228C3A6400AABB67 /* DetailVM.swift */; };
 		6E3F5340228C3AAB00AABB67 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F533F228C3AAB00AABB67 /* DetailView.swift */; };
 		6E3F5342228C3AD200AABB67 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F5341228C3AD200AABB67 /* DetailVC.swift */; };
+		6E4FB125228CE9FE00EE1DFF /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FB124228CE9FE00EE1DFF /* UIView+Constraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2525E797128FE7506F7D8DD1 /* Pods-FoursquarePOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePOC.debug.xcconfig"; path = "Target Support Files/Pods-FoursquarePOC/Pods-FoursquarePOC.debug.xcconfig"; sourceTree = "<group>"; };
+		545265291CDBD4B81E397A99 /* Pods-FoursquarePOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquarePOC.release.xcconfig"; path = "Target Support Files/Pods-FoursquarePOC/Pods-FoursquarePOC.release.xcconfig"; sourceTree = "<group>"; };
+		6E020DD8228D5271002B23BE /* FoursquareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareAPI.swift; sourceTree = "<group>"; };
 		6E3F52F9228C09A600AABB67 /* FoursquarePOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquarePOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3F52FC228C09A600AABB67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E3F5303228C09A700AABB67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 		6E3F533D228C3A6400AABB67 /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
 		6E3F533F228C3AAB00AABB67 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		6E3F5341228C3AD200AABB67 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		6E4FB124228CE9FE00EE1DFF /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
+		D641C4220B2A42989DAE6347 /* Pods_FoursquarePOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquarePOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,17 +79,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288C31DE0220F506C190F5F3 /* Pods_FoursquarePOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		405DA662C6378B589A2F6F24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2525E797128FE7506F7D8DD1 /* Pods-FoursquarePOC.debug.xcconfig */,
+				545265291CDBD4B81E397A99 /* Pods-FoursquarePOC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E020DD7228D5265002B23BE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6E020DD8228D5271002B23BE /* FoursquareAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		6E3F52F0228C09A600AABB67 = {
 			isa = PBXGroup;
 			children = (
 				6E3F52FB228C09A600AABB67 /* FoursquarePOC */,
 				6E3F52FA228C09A600AABB67 /* Products */,
+				405DA662C6378B589A2F6F24 /* Pods */,
+				FF9F8455B178D0D9D856396D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +124,8 @@
 		6E3F52FB228C09A600AABB67 /* FoursquarePOC */ = {
 			isa = PBXGroup;
 			children = (
+				6E020DD7228D5265002B23BE /* Network */,
+				6E4FB123228CE9EF00EE1DFF /* Extensions */,
 				6E3F5315228C149F00AABB67 /* Base */,
 				6E3F5314228C148900AABB67 /* App */,
 				6E3F532C228C2C4000AABB67 /* Scenes */,
@@ -183,6 +213,22 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		6E4FB123228CE9EF00EE1DFF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E4FB124228CE9FE00EE1DFF /* UIView+Constraint.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF9F8455B178D0D9D856396D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D641C4220B2A42989DAE6347 /* Pods_FoursquarePOC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E3F530B228C09A700AABB67 /* Build configuration list for PBXNativeTarget "FoursquarePOC" */;
 			buildPhases = (
+				1E2FFC132256798D09F838E3 /* [CP] Check Pods Manifest.lock */,
 				6E3F52F5228C09A600AABB67 /* Sources */,
 				6E3F52F6228C09A600AABB67 /* Frameworks */,
 				6E3F52F7228C09A600AABB67 /* Resources */,
+				305BC97553C877AE90B52CFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,12 +296,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E2FFC132256798D09F838E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoursquarePOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		305BC97553C877AE90B52CFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoursquarePOC/Pods-FoursquarePOC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoursquarePOC/Pods-FoursquarePOC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6E3F52F5228C09A600AABB67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6E3F5311228C135C00AABB67 /* Base.swift in Sources */,
+				6E020DD9228D5271002B23BE /* FoursquareAPI.swift in Sources */,
 				6E3F5329228C2BDC00AABB67 /* MainView.swift in Sources */,
 				6E3F5320228C159800AABB67 /* SplashVC.swift in Sources */,
 				6E3F5333228C2F9D00AABB67 /* PlacesVM.swift in Sources */,
@@ -262,6 +364,7 @@
 				6E3F533E228C3A6400AABB67 /* DetailVM.swift in Sources */,
 				6E3F5325228C2B8A00AABB67 /* MainVMContracts.swift in Sources */,
 				6E3F52FD228C09A600AABB67 /* AppDelegate.swift in Sources */,
+				6E4FB125228CE9FE00EE1DFF /* UIView+Constraint.swift in Sources */,
 				6E3F532F228C2F0C00AABB67 /* PlacesCoordinator.swift in Sources */,
 				6E3F5322228C2B0C00AABB67 /* MainCoordinator.swift in Sources */,
 				6E3F5318228C14CB00AABB67 /* SplashCoordinator.swift in Sources */,
@@ -412,6 +515,7 @@
 		};
 		6E3F530C228C09A700AABB67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2525E797128FE7506F7D8DD1 /* Pods-FoursquarePOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -431,6 +535,7 @@
 		};
 		6E3F530D228C09A700AABB67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545265291CDBD4B81E397A99 /* Pods-FoursquarePOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

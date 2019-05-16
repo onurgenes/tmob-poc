@@ -14,5 +14,10 @@ final class PlacesVC: BaseVC<PlacesVM, PlacesView, PlacesCoordinator> {
         super.viewDidLoad()
         
         view.backgroundColor = .yellow
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped(_:))))
+    }
+    
+    @objc func tapped(_ recognizor: UITapGestureRecognizer) {
+        
     }
 }

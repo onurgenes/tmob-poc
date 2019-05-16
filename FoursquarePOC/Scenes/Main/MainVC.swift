@@ -13,8 +13,6 @@ final class MainVC: BaseVC<MainVM, MainView, MainCoordinator> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("I AM HERE MOFO")
-        view.backgroundColor = .blue
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped(_:))))
     }
     
