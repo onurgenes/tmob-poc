@@ -13,9 +13,6 @@ import Foundation
 // For demo purposes, we are covering as little as we want.
 // Generated with https://app.quicktype.io/
 // ***
-// To parse the JSON, add this file to your project and do:
-//
-//   let venueDetail = try? newJSONDecoder().decode(VenueDetail.self, from: jsonData)
 
 import Foundation
 

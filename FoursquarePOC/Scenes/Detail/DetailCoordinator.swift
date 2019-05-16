@@ -20,6 +20,7 @@ final class DetailCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let vc = DetailVC()
+        navigationController.present(vc, animated: true)
     }
 }

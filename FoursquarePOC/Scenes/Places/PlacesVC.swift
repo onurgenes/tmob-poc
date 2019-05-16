@@ -17,6 +17,11 @@ final class PlacesVC: BaseVC<PlacesVM, PlacesView, PlacesCoordinator> {
         }
     }
     
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+        definesPresentationContext = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +41,7 @@ extension PlacesVC: PlacesVMOutputProtocol {
     }
     
     func didGetVenueDetails(details: VenueDetail) {
-        print(details)
+        
     }
 }
 
@@ -56,7 +61,8 @@ extension PlacesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedVenue = model.response.venues[indexPath.row]
-        viewModel.getVenueDetails(id: selectedVenue.id)
+//        viewModel.getVenueDetails(id: selectedVenue.id)
+        coordinator?.openDetail()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
