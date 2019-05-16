@@ -11,8 +11,10 @@ import Foundation
 protocol MainVMProtocol: BaseVMProtocol {
     var delegate: MainVMOutputProtocol? { get set }
     
+    func getNearbyPlaces(for locationName: String, type: String)
 }
 
 protocol MainVMOutputProtocol: BaseVMOutputProtocol {
-    
+    func didGetNearby(places: NearbyModel)
+    func failedGetNearby(error: Error)
 }

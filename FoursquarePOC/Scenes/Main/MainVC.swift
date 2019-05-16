@@ -14,11 +14,23 @@ final class MainVC: BaseVC<MainVM, MainView, MainCoordinator> {
         super.viewDidLoad()
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped(_:))))
+        
+        viewModel.getNearbyPlaces(for: "ankara", type: "resto")
     }
     
     @objc func tapped(_ recognizor: UITapGestureRecognizer) {
         if let coordinator = coordinator {
             coordinator.openPlaces()
         }
+    }
+}
+
+extension MainVC: MainVMOutputProtocol {
+    func didGetNearby(places: NearbyModel) {
+        print(places)
+    }
+    
+    func failedGetNearby(error: Error) {
+        print(error)
     }
 }
