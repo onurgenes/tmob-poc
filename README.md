@@ -20,3 +20,20 @@ Splash Screen is waiting on purpose. It was one of the requirements. It is empty
 Project support iOS 9.0. I think this is unnecessary but that was one of the requirements.
 
 I hope you like it. Ask me anything about project. I am ready to answer your questions.
+
+# Installation
+
+Clone repo:
+```bash
+git clone git@github.com:onurgenes/tmob-poc.git
+```
+
+Install dependencies:
+```bash
+pod install
+```
+
+Run the `.xcworkspace`or shortcut:
+```bash
+xed .
+```
